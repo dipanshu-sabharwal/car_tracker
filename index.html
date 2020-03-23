@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Learn Constructors
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row py-3">
+      <div
+        class="col-3 mx-auto p-3 border rounded border-dark shadow shadow-lg"
+      >
+        <div class="form-group">
+          <label for="carMake" class="font-weight-bold ml-1 mb-3"
+            >Car Make</label
+          >
+          <input
+            type="text"
+            name="Car Make"
+            id="carMake"
+            class="form-control mb-3"
+          />
+
+          <label for="model" class="font-weight-bold ml-1 mb-3">Model</label>
+          <input
+            type="text"
+            name="Model"
+            id="model"
+            class="form-control mb-3"
+          />
+
+          <label for="topSpeed" class="font-weight-bold ml-1 mb-3"
+            >Top Speed</label
+          >
+          <input
+            type="number"
+            name="Top Speed"
+            id="topSpeed"
+            class="form-control mb-3"
+          />
+
+          <button
+            class="btn btn-block bg-dark text-light mt-5"
+            onclick="createCar()"
+          >
+            Submit
+          </button>
+
+          <button
+            class="btn btn-block bg-dark text-light mt-4"
+            onclick="showAllTrips()"
+          >
+            Show all trips
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="col-3 mx-auto p-3 border rounded border-dark shadow shadow-lg"
+        id="carDetails"
+      >
+        <div class="form-group">
+          <div>
+            <label for="carSelector" class="font-weight-bold ml-1 mb-3"
+              >Select car</label
+            >
+            <select
+              name="Select Car"
+              id="carSelector"
+              class="form-control mb-3"
+            >
+            </select>
+          </div>
+
+          <label for="time" class="font-weight-bold ml-1 mb-3">Time</label>
+          <input
+            type="number"
+            name="Time"
+            id="time"
+            class="form-control mb-3"
+          />
+
+          <label for="speed" class="font-weight-bold ml-1 mb-3">Speed</label>
+          <input
+            type="number"
+            name="Speed"
+            id="speed"
+            class="form-control mb-3"
+          />
+
+          <button
+            class="btn btn-block bg-dark text-light mt-5"
+            onclick="calculateTrip()"
+          >
+            Submit
+          </button>
+
+          <button
+            class="btn btn-block bg-dark text-light mt-4"
+            onclick="showStatus()"
+          >
+            Show Status
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="mx-auto col-3 p-3 border rounded border-dark shadow shadow-lg text-center d-flex align-items-center"
+        style="visibility: hidden;"
+        id="currentStatusDetails"
+      ></div>
+    </div>
+
+    <div class="m-auto col-10 m-3 p-3" id="tripDetails"></div>
+  </body>
+  <script src="index.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+</html>
